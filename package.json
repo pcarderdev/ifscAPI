@@ -1,0 +1,16 @@
+{
+  "name": "ifscapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "ifsc": "node ifscScrape"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^22.9.0"
+  }
+}
