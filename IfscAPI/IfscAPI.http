@@ -1,0 +1,6 @@
+@IfscAPI_HostAddress = http://localhost:5100
+
+GET {{IfscAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
