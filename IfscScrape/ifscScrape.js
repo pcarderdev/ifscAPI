@@ -11,18 +11,19 @@ async function run() {
 
   for (let discipline of disciplines) {
     for (let category of categories) {
-      const url = `https://www.ifsc-climbing.org/ranking/index?discipline=${discipline}&category=${category}`;
+      const url = `https://www.ifsc-climbing.org/rankings/index?discipline=${discipline}&category=${category}`;
+      console.log(url);
       await page.goto(url);
       await page.waitForSelector('tbody tr', { visible: true });
       await page.screenshot({
-        path: `${category}_${discipline}.png`,
+        path: `../Images/${category}_${discipline}.png`,
         fullPage: true,
       });
       await getRankings(page);
     }
   }
 
-  await getIndividualAthleteData(ATHLETE_DATA[0], page);
+  //await getIndividualAthleteData(ATHLETE_DATA[0], page);
   console.log(ATHLETE_DATA[0]);
   await browser.close();
 }
